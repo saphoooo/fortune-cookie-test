@@ -13,7 +13,7 @@ import (
 )
 
 func weebhook(w http.ResponseWriter, r *http.Request) {
-	if r.Header.Get("secret") != os.Getenv("FORUNE_COOKIE") {
+	if r.Header.Get("secret") != os.Getenv("FORTUNE_COOKIE") {
 		w.WriteHeader(http.StatusNotFound)
 		w.Write([]byte("Page not found"))
 		return
